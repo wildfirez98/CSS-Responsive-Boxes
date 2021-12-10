@@ -1,3 +1,49 @@
+/*********************************
+ * Build Helpers
+ *********************************/
+
+ /* give each element a border */
+* {
+    border: 1px solid mediumvioletred;
+} 
+
 body {
   background: blanchedalmond;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  background-color: dodgerblue;
+  min-height: 100vh;
+}
+
+.container > header,main,footer {
+  background-color: #f1f1f1;
+}
+
+header, footer {
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 3;
+}
+
+header {
+  width: 100%;
+}
+
+main, footer, header {
+  margin: 1em;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+})
